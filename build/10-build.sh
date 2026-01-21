@@ -35,9 +35,8 @@ echo "::group:: Install Packages"
 # Example: dnf5 install -y tmux
 dnf5 install -y \
   niri \
-  xdg-desktop-portal-gtk \
   xdg-desktop-portal-gnome \
-  polkit-gnome \
+  xfce-polkit \
   xwayland-satellite \
   gnome-keyring \
   mako \
