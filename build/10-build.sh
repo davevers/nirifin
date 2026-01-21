@@ -33,17 +33,28 @@ echo "::group:: Install Packages"
 
 # Install packages using dnf5
 # Example: dnf5 install -y tmux
+dnf5 install -y \
+  niri \
+  xdg-desktop-portal-gnome \
+  mate-polkit \
+  xwayland-satellite \
+  gnome-keyring \
+  mako \
+  waybar \
+  swaybg \
+  swayidle
 
 # Example using COPR with isolated pattern:
 # copr_install_isolated "ublue-os/staging" package-name
+copr_install_isolated "scottames/ghostty" ghostty
 
 echo "::endgroup::"
 
 echo "::group:: System Configuration"
 
 # Enable/disable systemd services
-systemctl enable podman.socket
 # Example: systemctl mask unwanted-service
+systemctl enable podman.socket
 
 echo "::endgroup::"
 
