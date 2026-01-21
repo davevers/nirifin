@@ -36,7 +36,7 @@ echo "::group:: Install Packages"
 dnf5 install -y \
   niri \
   xdg-desktop-portal-gnome \
-  xfce-polkit \
+  mate-polkit \
   xwayland-satellite \
   gnome-keyring \
   mako \
@@ -55,8 +55,6 @@ echo "::group:: System Configuration"
 # Enable/disable systemd services
 # Example: systemctl mask unwanted-service
 systemctl enable podman.socket
-systemctl --user add-wants niri.service mako.service
-systemctl --user add-wants niri.service waybar.service
 
 echo "::endgroup::"
 
