@@ -31,18 +31,58 @@ echo "::endgroup::"
 
 echo "::group:: Install Packages"
 
+packages=(
+  NetworkManager-l2tp-gnome
+  NetworkManager-libreswan-gnome
+  NetworkManager-openconnect-gnome
+  NetworkManager-openvpn-gnome
+  NetworkManager-sstp-gnome
+  NetworkManager-vpnc-gnome
+  Thunar
+  blueman
+  bolt
+  fprintd-pam
+  fuzzel
+  gnome-keyring-pam
+  grim
+  gvfs
+  gvfs-smb
+  imv
+  kanshi
+  lxqt-policykit
+  mako
+  mesa-vulkan-drivers
+  network-manager-applet
+  niri
+  pavucontrol
+  pinentry-gnome3
+  playerctl
+  plymouth-system-theme
+  polkit
+  pulseaudio-utils
+  sddm
+  sddm-wayland-sway
+  slurp
+  swaybg
+  swayidle
+  swaylock
+  system-config-printer
+  thunar-archive-plugin
+  tuned-ppd
+  tuned-switcher
+  waybar
+  wev
+  wl-clipboard
+  wlr-randr
+  wlsunset
+  xarchiver
+  xdg-desktop-portal-gnome
+  xwayland-satellite
+  )
+
 # Install packages using dnf5
 # Example: dnf5 install -y tmux
-dnf5 install -y \
-  niri \
-  xdg-desktop-portal-gnome \
-  mate-polkit \
-  xwayland-satellite \
-  gnome-keyring \
-  mako \
-  waybar \
-  swaybg \
-  swayidle
+dnf5 install -y "${packages[@]}"
 
 # Example using COPR with isolated pattern:
 # copr_install_isolated "ublue-os/staging" package-name
