@@ -34,6 +34,28 @@ echo "::group:: Install Packages"
 # Install packages using dnf5
 # Example: dnf5 install -y tmux
 dnf5 install -y \
+  #environment
+  polkit \
+  mate-polkit  \
+  fprintd-pam \
+  xdg-user-dirs \
+  dbus-tools \
+  dbus-daemon \
+  wl-clipboard \
+  pavucontrol \
+  qt5-qtwayland \
+  qt6-qtwayland \
+  google-noto-emoji-fonts \
+  alsa-firmware \
+  p7zip \
+
+  #sound
+  wireplumber \
+  pipewire \
+  pamixer \
+  pulseaudio-utils \
+
+  # niri
   niri \
   xdg-desktop-portal-gnome \
   mate-polkit \
