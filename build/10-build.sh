@@ -52,6 +52,7 @@ packages=(
   lxqt-policykit
   mako
   mesa-vulkan-drivers
+  mesa-libGLU
   network-manager-applet
   niri
   pavucontrol
@@ -60,8 +61,6 @@ packages=(
   plymouth-system-theme
   polkit
   pulseaudio-utils
-  sddm
-  sddm-wayland-sway
   slurp
   swaybg
   swayidle
@@ -77,6 +76,7 @@ packages=(
   wlsunset
   xarchiver
   xdg-desktop-portal-gnome
+  xdg-desktop-portal-gtk
   xwayland-satellite
   )
 
