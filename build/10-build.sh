@@ -58,7 +58,6 @@ packages=(
   pavucontrol
   pinentry-gnome3
   playerctl
-  plymouth-system-theme
   polkit
   pulseaudio-utils
   slurp
@@ -72,7 +71,6 @@ packages=(
   waybar
   wev
   wl-clipboard
-  wlr-randr
   wlsunset
   xarchiver
   xdg-desktop-portal-gnome
