@@ -30,36 +30,58 @@ cp /ctx/custom/flatpaks/*.preinstall /etc/flatpak/preinstall.d/
 echo "::endgroup::"
 
 echo "::group:: Install Packages"
+packages=(
+  NetworkManager-l2tp-gnome
+  NetworkManager-libreswan-gnome
+  NetworkManager-openconnect-gnome
+  NetworkManager-openvpn-gnome
+  NetworkManager-sstp-gnome
+  NetworkManager-vpnc-gnome
+  Thunar
+  blueman
+  bolt
+  fprintd-pam
+  fuzzel
+  gnome-keyring-pam
+  grim
+  gvfs
+  gvfs-smb
+  imv
+  kanshi
+  lxqt-policykit
+  mako
+  mesa-vulkan-drivers
+  network-manager-applet
+  niri
+  pavucontrol
+  pinentry-gnome3
+  playerctl
+  plymouth-system-theme
+  polkit
+  pulseaudio-utils
+  sddm
+  sddm-wayland-sway
+  slurp
+  swaybg
+  swayidle
+  swaylock
+  system-config-printer
+  thunar-archive-plugin
+  tuned-ppd
+  tuned-switcher
+  waybar
+  wev
+  wl-clipboard
+  wlr-randr
+  wlsunset
+  xarchiver
+  xdg-desktop-portal-gnome
+  xwayland-satellite
+  )
 
 # Install packages using dnf5
 # Example: dnf5 install -y tmux
-dnf5 install -y \
-  polkit \
-  mate-polkit  \
-  fprintd-pam \
-  xdg-user-dirs \
-  dbus-tools \
-  dbus-daemon \
-  wl-clipboard \
-  pavucontrol \
-  qt5-qtwayland \
-  qt6-qtwayland \
-  google-noto-emoji-fonts \
-  alsa-firmware \
-  p7zip \
-  wireplumber \
-  pipewire \
-  pamixer \
-  pulseaudio-utils \
-  niri \
-  xdg-desktop-portal-gnome \
-  mate-polkit \
-  xwayland-satellite \
-  gnome-keyring \
-  mako \
-  waybar \
-  swaybg \
-  swayidle
+dnf5 install -y $packages
 
 # Example using COPR with isolated pattern:
 # copr_install_isolated "ublue-os/staging" package-name
