@@ -52,16 +52,14 @@ packages=(
   lxqt-policykit
   mako
   mesa-vulkan-drivers
+  mesa-libGLU
   network-manager-applet
   niri
   pavucontrol
   pinentry-gnome3
   playerctl
-  plymouth-system-theme
   polkit
   pulseaudio-utils
-  sddm
-  sddm-wayland-sway
   slurp
   swaybg
   swayidle
@@ -73,10 +71,10 @@ packages=(
   waybar
   wev
   wl-clipboard
-  wlr-randr
   wlsunset
   xarchiver
   xdg-desktop-portal-gnome
+  xdg-desktop-portal-gtk
   xwayland-satellite
   )
 
