@@ -82,7 +82,7 @@ packages=(
 
 # Install packages using dnf5
 # Example: dnf5 install -y tmux
-dnf5 install -y "$packages"
+dnf5 install -y "$packages[@]"
 
 # Example using COPR with isolated pattern:
 # copr_install_isolated "ublue-os/staging" package-name
